@@ -1,0 +1,30 @@
+.friendlist-item-container {
+  width: 100px;
+  padding: 20px 8px;
+  border: 3px solid black;
+  border-radius: 16px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.friend-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.friend-state {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}

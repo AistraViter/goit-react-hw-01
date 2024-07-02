@@ -1,28 +1,26 @@
-export default function Profile (props)  {
+import "../Profile/Profile.css";
+export default function Profile({ image = '', name = 'Unknown', tag = '', location = '', stats = {} }) {
+  const { followers = 0, views = 0, likes = 0 } = stats;
   return (
-    <div>
-      <div>
-        <img
-          src={props.image}
-          alt= {props.name}
-        />
-        <p>{props.name}</p>
-        <p>@{props.tag}</p>
-        <p>{props.location}</p>
+    <div className="profile-border">
+      <div className="image-border">
+        <img src={image} alt={name} />
       </div>
-
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{props.stats.followers}</span>
+      <p className="user-name">{name}</p>
+      <p className="user-tag">@{tag}</p>
+      <p className="user-tag">{location}</p>
+      <ul className="stats-container">
+        <li className="stats-item">
+          <span className="stats-title">Followers</span>
+          <span className="stats-info">{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{props.stats.views}</span>
+        <li className="stats-item middle">
+          <span className="stats-title">Views</span>
+          <span className="stats-info">{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{props.stats.likes}</span>
+        <li className="stats-item">
+          <span className="stats-title">Likes</span>
+          <span className="stats-info">{likes}</span>
         </li>
       </ul>
     </div>

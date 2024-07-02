@@ -1,0 +1,41 @@
+table {
+  width: 648px;
+  margin-top: 40px;
+  border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border-collapse: collapse; /* Встановлює режим накладення рамок */
+}
+
+thead {
+  padding: 8px;
+  height: 40px;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+tr {
+  padding: 8px;
+  height: 40px;
+}
+
+th,
+td {
+  border: 1px solid black; /* Задає рамку для стовпців */
+  text-align: center;
+  padding: 8px;
+}
+
+table td:first-child {
+  text-transform: capitalize;
+}
+
+/* Задає фон білого кольору для непарних рядків */
+table tbody tr:nth-child(odd) {
+    background-color: white;
+  }
+
+  /* Задає фон сірого кольору для парних рядків */
+  table tbody tr:nth-child(even) {
+    background-color: lightgray;
+  }
