@@ -1,4 +1,4 @@
-table {
+.transactionHistoryTable {
   width: 648px;
   margin-top: 40px;
   border: 2px solid black;
@@ -7,35 +7,32 @@ table {
   border-collapse: collapse; /* Встановлює режим накладення рамок */
 }
 
-thead {
-  padding: 8px;
-  height: 40px;
+.transactionHistoryHead {
   background-color: rgb(58, 58, 58);
   color: white;
 }
 
-tr {
+.transactionHistoryRow {
   padding: 8px;
   height: 40px;
 }
 
-th,
-td {
+.transactionHistoryRow th,
+.transactionHistoryRow td {
   border: 1px solid black; /* Задає рамку для стовпців */
   text-align: center;
-  padding: 8px;
 }
 
-table td:first-child {
+.transactionHistoryTable td:first-child {
   text-transform: capitalize;
 }
 
 /* Задає фон білого кольору для непарних рядків */
-table tbody tr:nth-child(odd) {
-    background-color: white;
-  }
+.transactionHistoryTable tbody tr:nth-child(odd) {
+  background-color: white;
+}
 
-  /* Задає фон сірого кольору для парних рядків */
-  table tbody tr:nth-child(even) {
-    background-color: lightgray;
-  }
+/* Задає фон сірого кольору для парних рядків */
+.transactionHistoryTable tbody tr:nth-child(even) {
+  background-color: lightgray;
+}
