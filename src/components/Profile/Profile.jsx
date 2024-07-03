@@ -1,28 +1,53 @@
-import "../Profile/Profile.css";
-export default function Profile({ image = '', name = 'Unknown', tag = '', location = '', stats = {} }) {
+import styles from './Profile.module.css';
+
+const {
+  profile,
+  profileBorder,
+  imageBorder,
+  userName,
+  userTag,
+  statsContainer,
+  statsItem,
+  statsTitle,
+  statsInfo,
+  middle,
+} = styles;
+
+const Profile = ({
+  image = "",
+  name = "Unknown",
+  tag = "",
+  location = "",
+  stats = {},
+}) => {
   const { followers = 0, views = 0, likes = 0 } = stats;
+
   return (
-    <div className="profile-border">
-      <div className="image-border">
-        <img src={image} alt={name} />
+    <div className={profile}>
+      <div className={profileBorder}>
+        <div className={imageBorder}>
+          <img src={image} alt={name} />
+        </div>
+        <p className={userName}>{name}</p>
+        <p className={userTag}>@{tag}</p>
+        <p className={userTag}>{location}</p>
+        <ul className={statsContainer}>
+          <li className={statsItem}>
+            <span className={statsTitle}>Followers</span>
+            <span className={statsInfo}>{followers}</span>
+          </li>
+          <li className={`${statsItem} ${middle}`}>
+            <span className={statsTitle}>Views</span>
+            <span className={statsInfo}>{views}</span>
+          </li>
+          <li className={statsItem}>
+            <span className={statsTitle}>Likes</span>
+            <span className={statsInfo}>{likes}</span>
+          </li>
+        </ul>
       </div>
-      <p className="user-name">{name}</p>
-      <p className="user-tag">@{tag}</p>
-      <p className="user-tag">{location}</p>
-      <ul className="stats-container">
-        <li className="stats-item">
-          <span className="stats-title">Followers</span>
-          <span className="stats-info">{followers}</span>
-        </li>
-        <li className="stats-item middle">
-          <span className="stats-title">Views</span>
-          <span className="stats-info">{views}</span>
-        </li>
-        <li className="stats-item">
-          <span className="stats-title">Likes</span>
-          <span className="stats-info">{likes}</span>
-        </li>
-      </ul>
     </div>
   );
 }
+
+export default Profile;

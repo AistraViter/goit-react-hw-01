@@ -1,4 +1,4 @@
-.friendlist-item-container {
+.friendListItemContainer {
   width: 100px;
   padding: 20px 8px;
   border: 3px solid black;
@@ -10,13 +10,13 @@
   justify-content: space-between;
 }
 
-.friend-name {
+.friendName {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   color: black;
 }
 
-.friend-state {
+.friendState {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }

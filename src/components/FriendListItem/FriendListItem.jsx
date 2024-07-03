@@ -1,17 +1,32 @@
-import "./FriendListItem.css";
+import styles from "./FriendListItem.module.css";
 
-export default function FriendListItem({ friend }) {
+const {
+  friendListItemContainer,
+  friendName,
+  friendState,
+  online,
+  offline
+} = styles;
+
+const FriendListItem = ({
+
+
+ friend
+
+}) => {
   const { avatar = "", name = "Unknown", isOnline = false } = friend;
 
   return (
     <div>
-      <div className="friendlist-item-container">
+      <div className={friendListItemContainer}>
         <img src={avatar} alt={name} width="88" />
-        <p className="friend-name">{name}</p>
-        <p className={`friend-state ${isOnline ? "online" : "offline"}`}>
-          {isOnline ? "Online" : "Offline"}
-        </p>
+        <p className={friendName}>{name}</p>
+        <p className={`${friendState} ${isOnline ? online : offline}`}>
+  {isOnline ? "Online" : "Offline"}
+</p>
       </div>
     </div>
   );
 }
+
+export default FriendListItem
