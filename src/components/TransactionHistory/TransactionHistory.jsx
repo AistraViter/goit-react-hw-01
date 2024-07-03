@@ -1,7 +1,9 @@
-import "./TransactionHistory.module.css"
-export default function TransactionHistory({ items }) {
+import './TransactionHistory.module.css';
+
+const TransactionHistory = ({ items }) => {
   return (
-    <table>
+    <table className="transaction-history">
+
       <thead>
         <tr>
           <th>Type</th>
@@ -22,3 +24,4 @@ export default function TransactionHistory({ items }) {
     </table>
   );
 }
+export default TransactionHistory;
